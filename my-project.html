@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <title>Creating Blog Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+        <li> <a href="index.html"> <img src="img/logo.png" style="width: 50px" /> </a> </li>
+        <li> <a href="index.html"> Home </a></li>
+        <li> <a href="my-project.html"> MyProject </a> </li>
+        <li style="width: 100%; display: flex; justify-content: flex-end;">
+            <a href="contact.html" class="btn-contact">
+                Contact Me
+            </a>
+        </li>
+    </ul>
+</nav>
+ 
+  <div class="blog">
+    <div class="blog-form">
+      <div class="form-container">
+        <form onsubmit="addData(event)">
+          <h1>ADD MY PROJECT</h1>
+          <div>
+            <label for="input-blog-title">Project Name</label>
+            <input id="input-blog-title" />
+          </div>
+          <div>
+            <label for="input-blog-content">Description</label>
+            <textarea id="input-blog-content"></textarea>
+          </div>
+          <div>
+            <label>
+                Technologies :
+            </label>
+            <select class="text-inp">
+                <option>Node JS</option>
+                <option>React JS</option>
+                <option>Next JS</option>
+                <option>TypeScript</option>
+            </select>
+        </div>
+          <div>
+            <label>Upload Image</label>
+            <div class="input-blog-image-group">
+              <label for="input-blog-image">
+                <p>Choose</p>
+                <img src="img/file.png" alt="file" />
+              </label>
+              <input type="file" id="input-blog-image" hidden />
+            </div>
+          </div>
+          <div class="button-group">
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr class="line" />
+    <div id="contents" class="blog-list">
+      
+    </div>
+  </div>
+  <script src="js/blog.js"></script>
+</body>
+
+</html>
